@@ -1,5 +1,7 @@
 # SFCW Splash Screen
 
+![Screenshot](Sample.png)
+
 ## Info
 
 This is some random old (circa 2014) thing I have randomly. It's a Sonic Fan Character Wiki splash screen for classic Sonic games.
