@@ -10,7 +10,13 @@ Eh, feel free to modify it however you want. :P
 
 ## Applying it to your ROM hack
 
-Okay, first you have to have your modified Sonic 1/2/3K disassembly ready. Then follow these steps depending on which disassembly you have:
+Okay, first you have to have your modified Sonic 1/2/3K disassembly ready.
+
+Download this by clicking on the big green **Code** button, then Download ZIP.
+
+Extract the SFCW_Intro folder from this archive into your project folder.
+
+Then follow these steps depending on which disassembly you have:
 
 * [Sonic 1 Hivebrain](#sonic-1-hivebrain)
 * [Sonic 1 HG](#sonic-1-hg)
@@ -85,7 +91,7 @@ GameModeArray:
 Then find the label named "EndOfRom". Add this above it:
 
 ```
-		include "#SFCW_Intro\sfcw_splash_s1.asm"
+		include "SFCW_Intro/sfcw_splash_s1.asm"
 ```
 
 Then, find the "Sega_GotoTitle" label. It should look like this.
@@ -103,8 +109,6 @@ Sega_GotoTitle:
 		move.b #$20,($FFFFF600).w	; Go to SFCW screen
 		rts
 ```
-
-Extract the #SFCW_Intro folder from this archive into your project folder.
 
 Last, build and enjoy. ;)
 
@@ -178,7 +182,7 @@ GameModeArray:
 Then find the label named "EndOfRom". Add this above it:
 
 ```
-		include "#SFCW_Intro\sfcw_splash_s1.asm"
+		include "SFCW_Intro/sfcw_splash_s1.asm"
 ```
 
 Then, find the "Sega_GotoTitle" label. It should look like this.
@@ -196,8 +200,6 @@ Sega_GotoTitle:
 		move.b #$20,($FFFFF600).w	; Go to SFCW screen
 		rts
 ```
-
-Extract the #SFCW_Intro folder from this archive into your project folder.
 
 Last, build and enjoy. ;)
 
@@ -264,10 +266,8 @@ Sega_GotoTitle:
 Before "; end of 'ROM'", add this:
 
 ```
-	include "#SFCW_Intro\sfcw_splash_s2.asm"
+	include "SFCW_Intro/sfcw_splash_s2.asm"
 ```
-
-Extract the #SFCW_Intro folder from this archive into your project folder.
 
 Last, build and enjoy. ;)
 
@@ -327,19 +327,18 @@ Sega_Screen:
 Before ";EndROMPadding", add this:
 
 ```
-	include "#SFCW_Intro\sfcw_splash_s3k.asm"
+	include "SFCW_Intro/sfcw_splash_s3k.asm"
 ```
-
-Extract the #SFCW_Intro folder from this archive into your project folder.
 
 Last, build and enjoy. ;)
 
 ----
 
-Last updated: March 2, 2014
-
-Modified August 20, 2016
+Updated:
+* March 2, 2014
+* August 20, 2016
+* October 19, 2022
 
 ----
 
-(I might need to update this, because there could be new disassemblies popping up)
+(This has not been updated yet to keep up with the latest versions, sorry)
